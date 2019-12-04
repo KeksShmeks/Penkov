@@ -25,7 +25,7 @@ const MessageField = (props) => {
       <div>
          <h1>React Chat</h1>
          { messageElements }
-         <button onClick={ handleClick }>Отправить сообщение</button>
+         <button onClick={ handleClick }>Отправить сообщениеее</button>
       </div>
    )
    
