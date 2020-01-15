@@ -15,24 +15,28 @@ module.exports = {
 
    module: {
         rules: [
-                {
-                    test: /\.(js|jsx)$/,
-                    include: path.resolve(__dirname, "static_src"),
-                    loader: 'babel-loader',
-                    exclude: /node_modules/,
-                    options: {
-                      presets: ['@babel/env', '@babel/react'],
-                      plugins: [
-                        [
-                            "@babel/plugin-proposal-class-properties",
-                            {
-                                "loose": true
-                            }
+                    {
+                        test: /\.(js|jsx)$/,
+                        include: path.resolve(__dirname, "static_src"),
+                        loader: 'babel-loader',
+                        exclude: /node_modules/,
+                        options: {
+                        presets: ['@babel/env', '@babel/react'],
+                        plugins: [
+                            [
+                                "@babel/plugin-proposal-class-properties",
+                                {
+                                    "loose": true
+                                }
+                            ]
                         ]
-                    ]
- 
-                    }
-                },
+    
+                        }
+                    },
+                    {
+                        test: /\.css$/,
+                        loader: 'style-loader!css-loader',
+                    },
                 ],
             },
         resolve: {
